@@ -71,6 +71,12 @@ impl MovieHash {
     }
 }
 
+impl Display for MovieHash {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        write!(f, "{:x}", self.0)
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
