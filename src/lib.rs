@@ -37,7 +37,7 @@ impl MovieHash {
     }
 
     pub fn as_hex(&self) -> String {
-        format!("{:x}", self.0)
+        format!("{:016x}", self.0)
     }
 
     pub fn from_path(path: &str) -> Result<Self, Error> {
@@ -73,7 +73,7 @@ impl MovieHash {
 
 impl Display for MovieHash {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        write!(f, "{:x}", self.0)
+        write!(f, "{:016x}", self.0)
     }
 }
 
